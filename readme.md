@@ -8,3 +8,7 @@ running the commands:
     cd dotfiles
     git submodule init
     git submodule update
+
+Create symlinks:
+
+    ln -s ~/dotfiles/bashrc ~/.bashrc
