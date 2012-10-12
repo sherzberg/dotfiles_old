@@ -3,6 +3,9 @@
 call pathogen#infect()
 
 syntax on
+set ruler
+set number
+set showmode
 
 filetype plugin on
 filetype indent on
