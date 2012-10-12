@@ -1,0 +1,23 @@
+[user]
+    name = Spencer Herzberg
+    email = spencer.herzberg@gmail.com
+
+[color]
+	ui = auto
+
+[difftool]
+	prompt = false
+
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    dt = difftool
+    lg = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    ps = push origin master
+
