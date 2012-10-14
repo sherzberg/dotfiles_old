@@ -1,12 +1,13 @@
 Intro:
-  My dotfiles were mostly borrowed from:
+
+My dotfiles were mostly borrowed from:
 
     https://github.com/shawncplus/dotfiles
     https://github.com/nelstrom/dotfiles
     https://github.com/haridas/Dotfiles
     https://github.com/mbrochh/vim-as-a-python-ide
 
-Installation
+Installation:
 
     git clone git://github.com/whelmingbytes/dotfiles.git
 
