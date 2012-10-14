@@ -2,6 +2,9 @@
 " Pathogen Init
 call pathogen#infect()
 
+" Setup Leader
+let mapleader = ","
+
 syntax on
 set ruler
 set number
