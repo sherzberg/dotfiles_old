@@ -9,9 +9,7 @@ running the commands:
     git submodule init
     git submodule update
 
-Create symlinks:
+Install (be sure to backup anything like ~/.bashrc or ~/.vimrc as this will delete them):
 
-    ln -s ~/dotfiles/bashrc ~/.bashrc
-    ln -s ~/dotfiles/gitconfig ~/.gitconfig
-    ln -s ~/dotfiles/vim ~/.vim
-    ln -s ~/dotfiles/vimrc ~/.vimrc
+    $ ~/dotfiles/install
+
