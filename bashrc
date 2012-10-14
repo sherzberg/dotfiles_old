@@ -35,3 +35,9 @@ for i in ~/dotfiles/bash/exports/*; do
     . $i
 done
 
+# Functions
+for funcfile in ~/dotfiles/bash/functions/*; do
+    . $funcfile
+done
+
+proml
