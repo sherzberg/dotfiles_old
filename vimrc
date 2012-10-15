@@ -1,4 +1,3 @@
-
 " Pathogen Init
 call pathogen#infect()
 
@@ -35,3 +34,8 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+
+hi TabLine      ctermfg=White ctermbg=Blue cterm=none
+hi TabLineSel   ctermfg=Black ctermbg=White cterm=bold
+hi TabLineFill  ctermfg=White ctermbg=Blue cterm=none
+
