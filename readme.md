@@ -18,7 +18,9 @@ running the commands:
     git submodule init
     git submodule update
 
-# Install # (be sure to backup anything like ~/.bashrc or ~/.vimrc as this will delete them):
+# Install #
+
+Be sure to backup anything like ~/.bashrc or ~/.vimrc as this will delete them.
 
     $ ~/dotfiles/install
 
