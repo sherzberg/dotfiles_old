@@ -13,8 +13,14 @@ set showmode
 filetype plugin on
 filetype indent on
 
+" File Type settings
+autocmd filetype python set expandtab
+
+" Options
+set tabstop=4
+
 " Colors
-color darkblue
+color desert
 
 " CtrlP Mappings
 let g:ctrlp_map = '<c-p>'
