@@ -16,6 +16,10 @@ filetype indent on
 " Colors
 color darkblue
 
+" CtrlP Mappings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " Key Mappings
 map <up> <nop>
 map <down> <nop>
