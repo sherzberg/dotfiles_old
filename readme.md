@@ -1,4 +1,4 @@
-Intro:
+# Intro: #
 
 My dotfiles were mostly borrowed from:
 
@@ -7,7 +7,7 @@ My dotfiles were mostly borrowed from:
     https://github.com/haridas/Dotfiles
     https://github.com/mbrochh/vim-as-a-python-ide
 
-Installation:
+# Installation: #
 
     git clone git://github.com/whelmingbytes/dotfiles.git
 
@@ -18,7 +18,7 @@ running the commands:
     git submodule init
     git submodule update
 
-Install (be sure to backup anything like ~/.bashrc or ~/.vimrc as this will delete them):
+# Install # (be sure to backup anything like ~/.bashrc or ~/.vimrc as this will delete them):
 
     $ ~/dotfiles/install
 
