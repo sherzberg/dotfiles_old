@@ -18,7 +18,7 @@ running the commands:
     git submodule init
     git submodule update
 
-# Install #
+# Install: #
 
 Be sure to backup anything like ~/.bashrc or ~/.vimrc as this will delete them.
 
