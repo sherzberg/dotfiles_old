@@ -1,5 +1,5 @@
 
-alias ls='ls -l'
+alias ls='ls -l | grep -v "~$" | grep -v ".pyc"'
 alias l=ls
 alias la='ls -la'
 
