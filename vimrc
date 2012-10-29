@@ -4,7 +4,7 @@ call pathogen#infect()
 " Setup Leader
 let mapleader = ","
 
-syntax on
+"syntax on
 set ruler
 set number
 set showmode
@@ -14,9 +14,7 @@ filetype indent on
 
 " File Type settings
 autocmd filetype python set expandtab
-
-" Options
-set tabstop=4
+autocmd filetype html set ft=htmldjango.html.javascript.javascript-jquery " for SnipMate
 
 " Colors
 color desert
@@ -25,7 +23,14 @@ color desert
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+
 " Key Mappings
+""""""""""""""""""""""""""""""""""""""""""
+" Fast saving
+nmap <leader>w :w!<cr>
+
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
