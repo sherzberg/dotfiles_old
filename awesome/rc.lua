@@ -96,20 +96,21 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- }}}
 
 -- {{{ Wibox
--- Create a textclock widget
-mytextclock = awful.widget.textclock({ align = "right" })
 
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
--- Separator (daes)
-separator = widget({ type = "textbox" })
-separator.text = '<span color="#a2a2a2"> </span>'
+-- Space (daes)
+space = widget({ type = "textbox" })
+space.text = '<span color="#a86500"> </span>'
+
+-- Line
+line = widget({ type = "textbox" })
+line.text = '<span color="#a86500"> | </span>'
 
 -- Clock widget (daes)
 datewidget = widget({ type = "textbox" })
-vicious.register(datewidget, vicious.widgets.date, '<span color="#a86500">[</span> %d %B %R <span color="#a86500">]</span>', 60)
-
+vicious.register(datewidget, vicious.widgets.date, '<span color="#a86500">[</span> %d %b %R <span color="#a86500">]</span>', 60) 
 -- Vol widget (daes)
 volwidget = widget({ type = "textbox" })
 vicious.register(volwidget, vicious.widgets.volume, '<span color="#a2a2a2">$1%</span>', 1, "Master")
@@ -119,8 +120,14 @@ volicon = widget({ type = "imagebox", align = "right" })
 volicon.image = image(home_dir .. "/.config/awesome/themes/daes/icons/vol.png")
 
 -- CPU widget (daes)
-cpuwidget = widget({ type = "textbox" })
-vicious.register(cpuwidget, vicious.widgets.cpu, 'Cpu1: <span color="#a2a2a2">$1%</span>')
+cpuwidget0 = widget({ type = "textbox" })
+vicious.register(cpuwidget0, vicious.widgets.cpu, 'cpu0: <span color="#a2a2a2">$1%</span>')
+--cpuwidget1 = widget({ type = "textbox" })
+--vicious.register(cpuwidget1, vicious.widgets.cpu, 'cpu1: <span color="#a2a2a2">$1%</span>')
+--cpuwidget2 = widget({ type = "textbox" })
+--vicious.register(cpuwidget2, vicious.widgets.cpu, 'cpu2: <span color="#a2a2a2">$1%</span>')
+--cpuwidget3 = widget({ type = "textbox" })
+--vicious.register(cpuwidget3, vicious.widgets.cpu, 'cpu3: <span color="#a2a2a2">$1%</span>')
 
 -- Cpu icon (daes)
 cpuicon = widget({ type = "imagebox", align = "right" })
@@ -128,7 +135,7 @@ cpuicon.image = image(home_dir .. "/.config/awesome/themes/daes/icons/cpu.png")
 
 -- Memory usage (daes)
 memwidget = widget({ type = "textbox" })
-vicious.register(memwidget, vicious.widgets.mem, 'Ram: <span color="#a2a2a2">$1%</span>', 13)
+vicious.register(memwidget, vicious.widgets.mem, 'ram: <span color="#a2a2a2">$1%</span>', 13)
 
 
 -- Mem icon (daes)
@@ -206,25 +213,30 @@ for s = 1, screen.count() do
         {
             --mylauncher,
             mytaglist[s],
+	    line,
             mypromptbox[s],
+	    line,
             layout = awful.widget.layout.horizontal.leftright
         },
-        -- mylayoutbox[s],
-        separator,
-        --datewidget,
-        separator,
-        separator,
+	mylauncher,
+        --mylayoutbox[s],
+        	line,
+        datewidget,
+        	space,
         memwidget,
-        separator,
-        separator,
-        cpuwidget,
-        separator,
-        separator,
+        	line,
+        --cpuwidget3,
+        	--space,
+	--cpuwidget2,
+        	--space,
+	--cpuwidget1,
+        	--space,
+	cpuwidget0,
+        	line,
         volwidget,
-        separator,
+        	space,
         volicon,
-        separator,
-        mytextclock,
+        	line,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
@@ -422,9 +434,9 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
                             end)
 
 -- Start at runtime
-run_once("redshift")
-run_once("xrandr", "--output DVI-I-2 --right-of DVI-I-1")
-run_once("google-chrome")
+--run_once("redshift")
+--run_once("xrandr", "--output DVI-I-2 --right-of DVI-I-1")
+--run_once("google-chrome")
 
 -- }}}
 
