@@ -5,5 +5,6 @@ do
 	ln -s $HOME/dotfiles/$i $HOME/.$i;
 done;
 
-mkdir -p ~/.config/awesome
+rm -rf ~/.config/awesome
+
 ln -s $HOME/dotfiles/awesome $HOME/.config/awesome
