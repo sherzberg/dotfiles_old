@@ -21,3 +21,5 @@
     ls = ls-files
     ps = push origin master
 
+[core]
+	autocrlf = input
