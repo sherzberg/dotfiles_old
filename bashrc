@@ -24,6 +24,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# Colors
+for colorfile in ~/dotfiles/bash/colors/*; do
+    . $colorfile
+done
+
 # Aliases
 shopt -s expand_aliases
 for aliasfile in ~/dotfiles/bash/aliases/*; do
