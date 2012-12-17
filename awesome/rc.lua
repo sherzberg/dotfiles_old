@@ -29,18 +29,18 @@ use_titlebar = false
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    awful.layout.suit.floating, --1
-    awful.layout.suit.tile, --2
-    awful.layout.suit.tile.left, --3
-    awful.layout.suit.tile.bottom, --4
-    awful.layout.suit.tile.top, --5
-    awful.layout.suit.fair, --6
-    awful.layout.suit.fair.horizontal, --7
-    awful.layout.suit.spiral, --8
-    awful.layout.suit.spiral.dwindle, --9
-    awful.layout.suit.max, --10
-    awful.layout.suit.max.fullscreen, --11
-    awful.layout.suit.magnifier --12
+    awful.layout.suit.floating,
+    awful.layout.suit.tile,
+    awful.layout.suit.tile.left,
+    awful.layout.suit.tile.bottom,
+    awful.layout.suit.tile.top,
+    --awful.layout.suit.fair,
+    --awful.layout.suit.fair.horizontal,
+    --awful.layout.suit.spiral,
+    --awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.max,
+    awful.layout.suit.max.fullscreen,
+    --awful.layout.suit.magnifier
 }
 -- }}}
 
@@ -49,9 +49,9 @@ layouts =
 tags = {}
 tags.settings = {
     { name = "term",  layout = layouts[2] },
-    { name = "web",  layout = layouts[10] },
-    { name = "ide", layout = layouts[10] },
-    { name = "chat", layout = layouts[10] },
+    { name = "web",  layout = layouts[6] },
+    { name = "ide", layout = layouts[6] },
+    { name = "chat", layout = layouts[6] },
     { name = "media", layout = layouts[2] },
     { name = "misc", layout = layouts[1] }
 }
@@ -81,6 +81,7 @@ common = {
    { "Firefox", "firefox" }, 
    { "Empathy", "empathy" },
    { "Gedit", "gedit" },
+   { "MySQL Workbench", "mysql-workbench" },
    { "IntelliJ", "/opt/idea/idea-IU-123.72/bin/idea.sh" }
 }
 
@@ -111,6 +112,11 @@ line.text = '<span color="#a86500"> | </span>'
 -- Clock widget (daes)
 datewidget = widget({ type = "textbox" })
 vicious.register(datewidget, vicious.widgets.date, '<span color="#a86500">[</span> %d %b %R <span color="#a86500">]</span>', 60) 
+
+-- Battery widget
+batstatus = widget({ type = "textbox" })
+vicious.register(batstatus, vicious.widgets.bat, 'bat: <span color="#a2a2a2">$1 $2%</span>', 60, "BAT0")
+
 -- Vol widget (daes)
 volwidget = widget({ type = "textbox" })
 vicious.register(volwidget, vicious.widgets.volume, '<span color="#a2a2a2">$1%</span>', 1, "Master")
@@ -204,14 +210,14 @@ for s = 1, screen.count() do
     mywibox[s] = awful.wibox({
             position = "top",
             screen = s,
-            height = 16, 
+            height = 14, 
             border_color = beautiful.border_panel,
             border_width = beautiful.border_width_panel
     })  
     -- Add widgets to the wibox - order matters
     mywibox[s].widgets = {
         {
-            --mylauncher,
+            mylauncher,
             mytaglist[s],
 	    line,
             mypromptbox[s],
@@ -219,7 +225,7 @@ for s = 1, screen.count() do
             layout = awful.widget.layout.horizontal.leftright
         },
 	mylauncher,
-        --mylayoutbox[s],
+        mylayoutbox[s],
         	line,
         datewidget,
         	space,
@@ -236,6 +242,8 @@ for s = 1, screen.count() do
         volwidget,
         	space,
         volicon,
+		line,
+	batstatus,
         	line,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -385,10 +393,8 @@ awful.rules.rules = {
                      buttons = clientbuttons } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
-    { rule = { class = "pinentry" },
-      properties = { floating = true } },
     { rule = { class = "gimp" },
-      properties = { floating = true } },
+      properties = { floating = false } },
     -- Set Firefox to always map on tags number 3 of screen 2.
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2] } },
@@ -403,7 +409,7 @@ awful.rules.rules = {
 -- Signal function to execute when a new client appears.
 client.add_signal("manage", function (c, startup)
     -- Add a titlebar
-    -- awful.titlebar.add(c, { modkey = modkey })
+    --awful.titlebar.add(c, { modkey = modkey })
 
     -- Enable sloppy focus
     c:add_signal("mouse::enter", function(c)
@@ -430,11 +436,11 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus
                                        c.opacity = 1
                             end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal
-                                         c.opacity = 0.9
+                                         c.opacity = 0.5
                             end)
 
 -- Start at runtime
---run_once("redshift")
+run_once("redshift")
 --run_once("xrandr", "--output DVI-I-2 --right-of DVI-I-1")
 --run_once("google-chrome")
 
