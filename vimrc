@@ -31,6 +31,13 @@ set wildignore=*.o,*~,*.pyc
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Split Window Navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Remove arrow key mappings
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
