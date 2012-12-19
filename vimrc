@@ -4,7 +4,7 @@ call pathogen#infect()
 " Setup Leader
 let mapleader = ","
 
-"syntax on
+syntax on
 set ruler
 set number
 set showmode
@@ -17,7 +17,9 @@ autocmd filetype python set expandtab
 autocmd filetype html set ft=htmldjango.html.javascript.javascript-jquery " for SnipMate
 
 " Colors
-color desert
+"color desert
+set background=dark
+colorscheme solarized
 
 " CtrlP Mappings
 let g:ctrlp_map = '<c-p>'
