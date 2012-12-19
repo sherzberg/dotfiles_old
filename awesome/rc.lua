@@ -82,7 +82,8 @@ common = {
    { "Empathy", "empathy" },
    { "Gedit", "gedit" },
    { "MySQL Workbench", "mysql-workbench" },
-   { "IntelliJ", "/opt/idea/idea-IU-123.72/bin/idea.sh" }
+   { "IntelliJ", "/opt/idea/idea-IU-123.72/bin/idea.sh" },
+   { "VirtualBox", "virtualbox" }
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
