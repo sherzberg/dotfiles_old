@@ -1,10 +1,9 @@
 #!/bin/bash
-for i in bashrc gitconfig vimrc vim tmux.conf
+for i in bashrc gitconfig vimrc vim tmux.conf i3 i3status.conf
 do
 	rm -rf $HOME/.$i;
 	ln -s $HOME/dotfiles/$i $HOME/.$i;
 done;
 
 rm -rf ~/.config/awesome
-
 ln -s $HOME/dotfiles/awesome $HOME/.config/awesome
