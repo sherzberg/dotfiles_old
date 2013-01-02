@@ -144,4 +144,5 @@ bindsym XF86AudioLowerVolume exec "amixer -c 0 -- sset Master '2.00dB-'"
 
 #exec google-chrome
 exec feh --bg-fill ~/.i3/background.png
+exec wicd-gtk
 
