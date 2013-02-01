@@ -4,6 +4,9 @@ call pathogen#infect()
 " Setup Leader
 let mapleader = ","
 
+" Set 256 colors
+set t_Co=256
+
 syntax on
 set ruler
 set number
@@ -18,8 +21,9 @@ autocmd filetype html set ft=htmldjango.html.javascript.javascript-jquery " for 
 
 " Colors
 "color desert
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
+color 256-jungle
 
 " CtrlP Mappings
 let g:ctrlp_map = '<c-p>'

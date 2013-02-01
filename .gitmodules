@@ -25,3 +25,6 @@
 [submodule "vim/bundle/pythonmode"]
 	path = vim/bundle/pythonmode
 	url = git://github.com/klen/python-mode.git
+[submodule "vim/bundle/colorschemes"]
+	path = vim/bundle/colorschemes
+	url = git://github.com/flazz/vim-colorschemes.git
