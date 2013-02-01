@@ -15,6 +15,9 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# fix spelling mistakes!
+shopt -s cdspell
+
 source ~/dotfiles/bash/colors/gentoo-bash
 
 # enable programmable completion features (you don't need to enable
