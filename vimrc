@@ -7,6 +7,10 @@ let mapleader = ","
 " Set 256 colors
 set t_Co=256
 
+" Statusline
+set laststatus=2
+set statusline=%{fugitive#statusline()}
+
 syntax on
 set ruler
 set number
@@ -62,7 +66,6 @@ hi TabLineFill  ctermfg=White ctermbg=Blue cterm=none
 let g:pymode_folding=0
 
 " Python-Mode Keybindings
-"map <C-Space> :call RopeCompletions()<CR>
-"imap <C-space> <C-R>=RopeCodeAssistInsertMode()<CR>
+" map <C-Space> :call RopeCompletions()<CR>
+" imap <C-space> <C-R>=RopeCodeAssistInsertMode()<CR>
 map <C-b> :call RopeGotoDefinition()<CR>
-
