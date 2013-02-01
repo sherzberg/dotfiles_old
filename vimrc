@@ -57,3 +57,5 @@ hi TabLine      ctermfg=White ctermbg=Blue cterm=none
 hi TabLineSel   ctermfg=Black ctermbg=White cterm=bold
 hi TabLineFill  ctermfg=White ctermbg=Blue cterm=none
 
+" Python-Mode Settings
+let g:pymode_folding=0
