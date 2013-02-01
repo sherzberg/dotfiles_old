@@ -20,10 +20,11 @@ autocmd filetype python set expandtab
 autocmd filetype html set ft=htmldjango.html.javascript.javascript-jquery " for SnipMate
 
 " Colors
-"color desert
-"set background=dark
-"colorscheme solarized
 color 256-jungle
+
+" STOP USING ESC
+inoremap jk <esc>
+inoremap kj <esc>
 
 " CtrlP Mappings
 let g:ctrlp_map = '<c-p>'
@@ -59,3 +60,9 @@ hi TabLineFill  ctermfg=White ctermbg=Blue cterm=none
 
 " Python-Mode Settings
 let g:pymode_folding=0
+
+" Python-Mode Keybindings
+"map <C-Space> :call RopeCompletions()<CR>
+"imap <C-space> <C-R>=RopeCodeAssistInsertMode()<CR>
+map <C-b> :call RopeGotoDefinition()<CR>
+
