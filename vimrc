@@ -42,6 +42,9 @@ set wildignore=*.o,*~,*.pyc
 " Fast saving
 nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
+nmap <leader>wq :wq<cr>
+nmap <leader>qw :wq<cr>
+
 " Split Window Navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
