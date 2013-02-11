@@ -39,6 +39,7 @@ set wildignore=*.o,*~,*.pyc
 
 " Key Mappings
 """"""""""""""""""""""""""""""""""""""""""
+
 " Fast saving
 nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
@@ -72,3 +73,9 @@ let g:pymode_folding=0
 " map <C-Space> :call RopeCompletions()<CR>
 " imap <C-space> <C-R>=RopeCodeAssistInsertMode()<CR>
 map <C-b> :call RopeGotoDefinition()<CR>
+
+"QTPY
+au FileType python nnoremap <F8> :QTPY method verbose<CR>
+au FileType python nnoremap <F9> :QTPY session<CR>
+
+au FileType python nnoremap <silent><Leader>c <Esc>:QTPY class verbose<CR>
