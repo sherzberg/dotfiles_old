@@ -1,5 +1,11 @@
 syntax: glob
 
+# Python
+*.pyc
+
+# Vagrant
+.vagrant
+
 # OSX
 .DS_Store
 
