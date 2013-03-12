@@ -26,6 +26,7 @@ syntax: glob
 *.iml
 *.iws
 *.ipr
+*.idea
 
 # Java
 out/
