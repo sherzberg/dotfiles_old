@@ -22,6 +22,7 @@ filetype indent on
 " File Type settings
 autocmd filetype python set expandtab
 autocmd filetype html set ft=htmldjango.html.javascript.javascript-jquery " for SnipMate
+autocmd filetype python set ft=python.django
 
 " Colors
 color 256-jungle
