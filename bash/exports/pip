@@ -1,0 +1,2 @@
+export PIP_DOWNLOAD_CACHE=~/.pip_download_cache
+mkdir -p $PIP_DOWNLOAD_CACHE
