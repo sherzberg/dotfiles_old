@@ -21,8 +21,13 @@ filetype indent on
 
 " File Type settings
 autocmd filetype python set expandtab
-autocmd filetype html set ft=htmldjango.html.javascript.javascript-jquery " for SnipMate
 autocmd filetype python set ft=python.django
+
+" SnipMate
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['html'] = 'htmldjango,html,javascript,javascript-jquery'
+let g:snipMate.scope_aliases['htmldjango'] = 'htmldjango,html,javascript,javascript-jquery'
 
 " Colors
 color 256-jungle
