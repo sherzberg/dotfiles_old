@@ -13,10 +13,10 @@ proml ()
     local LIGHT_PURPLE="\[\033[1;34m\]";
     case $TERM in 
         xterm*)
-            TITLEBAR='\[\033]0;\u@\h:\w\007\]'
+            TITLEBAR='\[\u@\h\]'
         ;;
         *)
-            TITLEBAR=""
+            TITLEBAR='\[\u@\h\]'
         ;;
     esac;
     PS1="${TITLEBAR}$LIGHT_PURPLE\w$YELLOW\$(parse_git_branch)\n$LIGHT_GRAY\$ ";
