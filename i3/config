@@ -143,6 +143,5 @@ bindsym XF86AudioLowerVolume exec "amixer -c 0 -- sset Master '2.00dB-'"
 #assign [class="Google Chrome"] "2: web"
 
 #exec google-chrome
-exec feh --bg-fill ~/.i3/background.png
-exec wicd-client --tray
+exec feh --bg-fill ~/.background.png
 
