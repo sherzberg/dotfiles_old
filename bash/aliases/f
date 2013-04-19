@@ -1,3 +1,0 @@
-
-alias f='find . -type f \( -name "*.py" -name "*.pp" -name "*.h \) | xargs grep "$@"'
-
