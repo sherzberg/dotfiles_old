@@ -40,3 +40,9 @@
 [submodule "vim/bundle/puppet"]
 	path = vim/bundle/puppet
 	url = git://github.com/rodjek/vim-puppet.git
+[submodule "vim/bundle/coffee-script"]
+	path = vim/bundle/coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/jade"]
+	path = vim/bundle/jade
+	url = git://github.com/digitaltoad/vim-jade.git

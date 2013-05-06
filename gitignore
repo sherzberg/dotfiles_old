@@ -12,6 +12,9 @@ syntax: glob
 # OSX
 .DS_Store
 
+# NodeJS
+node_modules
+
 # Misc
 *.log
 *.log.1
