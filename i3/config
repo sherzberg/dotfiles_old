@@ -139,9 +139,11 @@ bindsym XF86AudioLowerVolume exec "amixer -c 0 -- sset Master '2.00dB-'"
 #bindsym XF86KbdBrightnessUp exec "sudo /opt/kbdlight/bin/kbdlight +"
 #bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
 
+# Other Keys
+bindsym $mod+p exec "pcmanfm"
 
 #assign [class="Google Chrome"] "2: web"
 
 #exec google-chrome
 exec feh --bg-fill ~/.background.png
-
+exec --no-startup-id nm-applet
