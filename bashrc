@@ -24,28 +24,36 @@ source ~/dotfiles/bash/colors/gentoo-bash
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+	. /etc/bash_completion
 fi
 
 # Colors
 for colorfile in ~/dotfiles/bash/colors/*; do
-    . $colorfile
+	. $colorfile
 done
 
 # Aliases
 shopt -s expand_aliases
 for aliasfile in ~/dotfiles/bash/aliases/*; do
-    source $aliasfile
+	source $aliasfile
 done
 
 # Exports
 for i in ~/dotfiles/bash/exports/*; do
-    . $i
+	. $i
 done
 
 # Functions
 for funcfile in ~/dotfiles/bash/functions/*; do
-    . $funcfile
+	. $funcfile
 done
+
+# Load profiles from /etc/profile.d
+if test -d /etc/profile.d/; then
+	for profile in /etc/profile.d/*.sh; do
+		test -r "$profile && . $profile"
+	done
+	unset profile
+fi
 
 proml
