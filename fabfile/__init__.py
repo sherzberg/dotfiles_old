@@ -1,7 +1,6 @@
 from fabric.api import task, env, execute, sudo, settings, hide, run
 from loom import puppet
 from loom.tasks import *
-import os
 
 
 env.user = 'sherzberg'
