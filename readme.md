@@ -1,4 +1,5 @@
-# Intro: #
+Intro
+=====
 
 My dotfiles were mostly borrowed from:
 
@@ -7,20 +8,30 @@ My dotfiles were mostly borrowed from:
     https://github.com/haridas/Dotfiles
     https://github.com/mbrochh/vim-as-a-python-ide
 
-# Installation: #
+Installation
+============
 
-    git clone git://github.com/whelmingbytes/dotfiles.git
+```bash
+$ git clone git://github.com/whelmingbytes/dotfiles.git
+```
 
 Where possible, Vim plugins are installed as git submodules. Check these out by
 running the commands:
 
-    cd dotfiles
-    git submodule init
-    git submodule update
+```bash
+$ make vim-init
+```
 
-# Install: #
+Install
+=======
 
 Be sure to backup anything like ~/.bashrc or ~/.vimrc as this will delete them.
 
-    $ ~/dotfiles/install
+```bash
+$ make install
+```
 
+Update Vim Plugins
+==================
+
+$ make vim-update

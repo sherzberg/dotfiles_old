@@ -1,5 +1,9 @@
 
-update-vim:
+vim-init:
+	git submodule init
+	git submoudle update
+
+vim-update:
 	git submodule foreach 'git checkout master && git pull'
 
 provision:
