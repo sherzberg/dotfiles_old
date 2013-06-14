@@ -1,6 +1,6 @@
 class roles::virtualization {
 
   class {'virtualbox': }
-  class {'vagrant': }
+  #class {'vagrant': }
 
 }

@@ -7,6 +7,6 @@ vim-update:
 	git submodule foreach 'git checkout master && git pull'
 
 provision:
-	fab provision -R workstation
+	fab -R workstation provision
 
 .PHONY: update-vim provision
