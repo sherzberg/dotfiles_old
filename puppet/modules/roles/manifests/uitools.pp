@@ -4,4 +4,14 @@ class roles::uitools {
     version => '12.1.4',
   }
 
+  package {'wm':
+    name => ['i3', 'i3-wm', 'i3lock' ,'i3status'],
+    ensure => present,
+  }
+
+  package {'graphics':
+    name => ['gimp', 'gimp-resynthesizer', 'gimp-ufraw', 'feh'],
+    ensure => present,
+  }
+
 }
