@@ -1,7 +1,7 @@
 
 vim-init:
 	git submodule init
-	git submoudle update
+	git submodule update
 
 vim-update:
 	git submodule foreach 'git checkout master && git pull'
